@@ -1,0 +1,12 @@
+[Unit]
+Description=M.A.R.S Monitor
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=60s
+ExecStart=/bin/bash /usr/bin/mars.sh monitor
+
+[Install]
+WantedBy=multi-user.target

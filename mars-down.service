@@ -1,0 +1,10 @@
+[Unit]
+Description=M.A.R.S Down
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStop=/bin/bash /usr/bin/mars.sh down
+
+[Install]
+WantedBy=multi-user.target
